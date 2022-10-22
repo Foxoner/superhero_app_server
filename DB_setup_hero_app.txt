@@ -1,0 +1,23 @@
+CREATE TABLE heroes (
+ 	id serial PRIMARY KEY,
+	nickname VARCHAR(100),
+        real_name VARCHAR(100),
+        origin_description text,
+        superpowers text,
+        catch_phrase text,
+        images text[],
+        main_image_index  integer DEFAULT 0
+);
+
+INSERT INTO heroes (nickname, real_name, origin_description, superpowers, catch_phrase, images, main_image_index) VALUES ('Superman', 'Clark Kent', 'He was born Kal-El on the planet Krypton, before being rocketed to Earth as an infant by his scientist father Jor-El, moments before Krypton''s destruction…', 'solar energy absorption and healing factor, solar flare and heat vision, solar invulnerability, flight…', 'Look, up in the sky, it''s a bird, it''s a plane, it''s Superman!', ARRAY['https://www.dc.com/sites/default/files/Char_Gallery_Superman_SUP01_16_5b9b02501915d5.80725381.jpg',
+              'https://www.dc.com/sites/default/files/GalleryChar_1900x900_SUPUN4_3_52ab8fd51b5a34.80060929.jpg',
+              'https://www.dc.com/sites/default/files/GalleryChar_1900x900_allstarSuperman_52ab8fc670d367.92768430.jpg'], 0);
+INSERT INTO heroes (nickname, real_name, origin_description, superpowers, catch_phrase, images, main_image_index) VALUES ('Batman', 'Bruce Wayne', 'In the name of his murdered parents, Bruce Wayne wages eternal war on the criminals of Gotham City. He is vengeance. He is the night. He is Batman.', 'exceptional martial artist, combat strategy, inexhaustible wealth, brilliant deductive skill, advanced technology', 'I am a superhero!', ARRAY['https://www.dc.com/sites/default/files/Char_Gallery_Batman_DTC1018_6053f2162bdf03.97426416.jpg',
+              'https://www.dc.com/sites/default/files/Movies-Gallery_JusticeLeague2017_BM_59f8bd4ac1e9e5.69884061.jpg',
+              'https://www.dc.com/sites/default/files/GalleryChar_1920x1080_Hush_54b5d1be8e4ca8.68343525.jpg'], 0);
+INSERT INTO heroes (nickname, real_name, origin_description, superpowers, catch_phrase, images, main_image_index) VALUES ('Riddler', 'Edward Nygma', 'One of the Dark Knight''s most infamous villains, Edward Nygma enjoys flaunting his intellectual superiority by conducting crimes and leaving clues for Batman to piece together.', 'genius-level intellect', 'I am a superhero!', ARRAY['https://cdn.mos.cms.futurecdn.net/9DuRDMcZpU7fsoRzP6nuii.jpg',
+              'https://legendary-digital-network-assets.s3.amazonaws.com/wp-content/uploads/2022/02/12184035/Riddler-DC-Comics-Art.jpg',
+              'https://www.denofgeek.com/wp-content/uploads/2019/09/the-riddler-year-of-the-villain-batman-dc.png?fit=669%2C416'], 0);
+INSERT INTO heroes (nickname, real_name, origin_description, superpowers, catch_phrase, images, main_image_index) VALUES ('Catwoman', 'Selina Kyle', 'As deadly as she is beautiful, infamous cat-burglar Selina Kyle uses her nine lives to walk the razor''s edge between light and darkness in Gotham City.', 'exceptional martial artist, gymnastic ability, combat skill', 'I am a superhero!', ARRAY['https://www.dc.com/sites/default/files/GalleryChar_1900x900_Catwoman_52ab9c21818074.19952677.jpg',
+              'https://www.dc.com/sites/default/files/Char_Gallery_Catwoman_theBatman2022_6219acfe5c52b1.51645758.jpg',
+              'https://www.dc.com/sites/default/files/GalleryChar_Gotham_Catwoman_541d34ce34d083.13505729.jpg'], 0);
