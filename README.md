@@ -19,5 +19,5 @@ This is a server side of my superhero app. Please use PostgreSQL.
               });`
 5. Run `npm start`
 
-PS You can also change the listening port to yours.
+P.S. You can also change the listening port to yours.
 
